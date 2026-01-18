@@ -1,0 +1,50 @@
+### create
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+    "taskName": "study spring"
+}
+
+### create without taskName
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+}
+
+### get task with id 999
+GET http://localhost:8080/tasks/999
+
+### get all
+GET http://localhost:8080/tasks
+
+### update
+PUT http://localhost:8080/tasks/2
+Content-Type: application/json
+
+{
+    "taskName": "study spring hard",
+    "status": "DONE"
+}
+
+### update with blank
+PUT http://localhost:8080/tasks/2
+Content-Type: application/json
+
+{
+    "taskName": "",
+    "status": "DONE"
+}
+
+### update with null
+PUT http://localhost:8080/tasks/2
+Content-Type: application/json
+
+{
+    "taskName": null,
+    "status": "DONE"
+}
+
+### delete
+DELETE http://localhost:8080/tasks/1
